@@ -1,0 +1,405 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2021-07-29 20:14:55",
+    "containerVersion": {
+        "path": "accounts/6004460255/containers/49004129/versions/0",
+        "accountId": "6004460255",
+        "containerId": "49004129",
+        "containerVersionId": "0",
+        "container": {
+            "path": "accounts/6004460255/containers/49004129",
+            "accountId": "6004460255",
+            "containerId": "49004129",
+            "name": "leoclovier.com.br/loja-teste/wordpress/",
+            "publicId": "GTM-WDLDVBW",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1627275519368",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6004460255/containers/49004129/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "tagId": "3",
+                "name": "GA - Loja",
+                "type": "gaawc",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "sendPageView",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableSendToServerContainer",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "measurementId",
+                        "value": "G-T31L8VBS6B"
+                    }
+                ],
+                "fingerprint": "1627276747546",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "tagId": "7",
+                "name": "Conversão - Produtos",
+                "type": "gaawe",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventName",
+                        "value": "commerce"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "eventParameters",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "ID"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{DL - ID}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "Produtos"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{DL - Produto}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "name",
+                                        "value": "Valor"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{DL - Preço Total}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "TAG_REFERENCE",
+                        "key": "measurementId",
+                        "value": "GA - Loja"
+                    }
+                ],
+                "fingerprint": "1627539364208",
+                "firingTriggerId": [
+                    "6"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "triggerId": "6",
+                "name": "Evento Compra",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "commerce"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1627533690198"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "variableId": "5",
+                "name": "Produtos",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecommerce.products"
+                    }
+                ],
+                "fingerprint": "1627517493341",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "variableId": "8",
+                "name": "Produto",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecommerce.products.name"
+                    }
+                ],
+                "fingerprint": "1627518125884",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "variableId": "9",
+                "name": "produto",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "ecommerce.revenue"
+                    }
+                ],
+                "fingerprint": "1627522294116",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "variableId": "10",
+                "name": "DL - ID",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "purchase.actionField.id"
+                    }
+                ],
+                "fingerprint": "1627534586973",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "variableId": "11",
+                "name": "DL - Produto",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "purchase.products.0.name"
+                    }
+                ],
+                "fingerprint": "1627538230358",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "variableId": "12",
+                "name": "DL - Preço Total",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "purchase.actionField.revenue"
+                    }
+                ],
+                "fingerprint": "1627534560582",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "variableId": "14",
+                "name": "DL - Quantidade",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "purchase.products.6.quantity"
+                    }
+                ],
+                "fingerprint": "1627539113935",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "variableId": "15",
+                "name": "DL - Preço",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "purchase.products.2.price"
+                    }
+                ],
+                "fingerprint": "1627539189720",
+                "formatValue": {}
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6004460255",
+                "containerId": "49004129",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1627589695397",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6004460255/containers/49004129/versions/0?apiLink=version"
+    }
+}
